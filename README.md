@@ -50,11 +50,11 @@ export default function OptimizedHeroImage() {
 ## System Architecture
 
 ```mermaid
-graph TD;
-    Client[User Browser] -->|Requests Route| Edge[Vercel Edge Cache]
-    Edge -->|Cache Hit X-Vercel-Cache| Client
-    Edge -->|Cache Miss| Server[Next.js App Server]
-    Server -->|Returns RSC Data Payload| Edge
+flowchart TD
+    Client["User Browser"] -->|"Requests Route"| Edge["Vercel Edge Cache"]
+    Edge -->|"Cache Hit (X-Vercel-Cache)"| Client
+    Edge -->|"Cache Miss"| Server["Next.js App Server"]
+    Server -->|"Returns RSC Data Payload"| Edge
 ```
 
 ## CLI Endpoint Testing
